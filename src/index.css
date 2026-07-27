@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #fbf9f1;
+    color: #1b1c17;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.blob-bg {
+  position: absolute;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.35;
+  border-radius: 50%;
+}
+
+.hover-bounce {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-bounce:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+.star-accent {
+  color: #ffe16d;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ea580c;
+  border-radius: 9999px;
+  border: 2px solid #fbf9f1;
+}
